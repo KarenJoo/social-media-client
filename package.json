@@ -8,7 +8,9 @@
     "build": "sass src/scss:dist/css",
     "start": "sass --watch src/scss:dist/css & live-server",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test": "npm run test-unit",
+    "test-unit": "jest"
   },
   "keywords": [],
   "author": "Noroff",
