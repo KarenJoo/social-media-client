@@ -22,5 +22,10 @@
   },
   "dependencies": {
     "bootstrap-dark-5": "^1.1.3"
+  },
+  "jest": {
+    "type": "commonjs",
+    "preset": "ts-jest",
+    "testEnvironment": "node"
   }
 }
