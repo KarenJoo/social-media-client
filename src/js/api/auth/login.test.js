@@ -10,7 +10,7 @@ jest.mock("../../storage/index.js", () => ({
     save: jest.fn()
   }));
 
-  const storageModule = require("./storage");
+  const storageModule = require("../../storage/index.js");
 
 // mock fetch response with ok status 
 describe("login", () => {
