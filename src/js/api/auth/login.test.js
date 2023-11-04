@@ -6,7 +6,7 @@ import { login } from "./login";
 global.fetch = jest.fn() 
 
 // mock save function (storage) 
-jest.mock("./storage", () => ({
+jest.mock("../../storage/index.js", () => ({
     save: jest.fn()
   }));
 

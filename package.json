@@ -14,6 +14,9 @@
   "author": "Noroff",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "babel-jest": "^29.7.0",
     "cypress": "^13.4.0",
     "jest": "^29.2.0",
     "live-server": "^1.2.2",
@@ -23,7 +26,8 @@
     "bootstrap-dark-5": "^1.1.3"
   },
   "jest": {
-    "type": "commonjs",
-    "testEnvironment": "node"
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   }
 }
