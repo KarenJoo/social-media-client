@@ -18,14 +18,13 @@ describe("login", () => {
         // fetch mock > mockResolvedValue > returns mock response 
 const mockResponse = {
     ok: true,
-    json: jest.fn().mockValue({
+    json: jest.fn().mockReturnValue({
         accessToken: "mockToken"
     })
 };
 
- global.fetch.mockFetchResponse(mockResponse);
-
-await login("test@test.com", "password");
+// mockResponse and stringify the response (chatGPT)
+global.fetch.mockResponse(JSON.stringify(mockResponse));
 
 
 // Check if fetch has been called with matcher > toHaveBeenCalledWith 
