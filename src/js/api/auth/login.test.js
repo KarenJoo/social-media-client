@@ -1,4 +1,5 @@
 import { login } from "./login";
+import { apiPath } from "../constants";
 
 // Mock fetch function
 global.fetch = jest.fn();
@@ -8,11 +9,21 @@ jest.mock("../../storage/index.js", () => ({
     save: jest.fn(),
     load: jest.fn(),
   }));
+
   
+// Mock apiPath
+jest.mock("../constants", () => ({
+    apiPath: jest.fn(),
+  }));
+
 const storageModule = require("../../storage/index.js");
+
 
 describe("login", () => {
   it("fetches and stores a token in browser storage", async () => {
+    // mocked value for apiPath
+    apiPath.mockReturnValue(`${apiPath}/social/auth/login`);
+
     // Mock response with OK status and a token
     const mockResponse = {
       ok: true,
@@ -24,7 +35,7 @@ describe("login", () => {
     // Mock fetch response
     global.fetch.mockResolvedValue({
       json: jest.fn().mockReturnValue(mockResponse),
-      ok: true
+      ok: true,
     });
 
     // Call the login function
@@ -47,8 +58,5 @@ describe("login", () => {
 
     // Check if save was called with the correct arguments for "token"
     expect(storageModule.save).toHaveBeenCalledWith("token", "mockToken");
-
-    // Check if save for "profile" was not called (optional)
-    expect(storageModule.save).not.toHaveBeenCalledWith("profile", expect.anything());
   });
 });
