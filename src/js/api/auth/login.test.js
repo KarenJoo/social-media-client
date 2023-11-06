@@ -1,8 +1,13 @@
 import { login } from "./login";
 import { apiPath } from "../constants";
+import { save } from "../../storage/index.js";
+import localStorageMock from "../../mocks/localStorage.mock";
 
 // Mock fetch function
 global.fetch = jest.fn();
+
+// Mock localStorage
+global.localStorage = localStorageMock;
 
 // Mock save function in storage
 jest.mock("../../storage/index.js", () => ({
@@ -32,11 +37,8 @@ describe("login", () => {
       })
     };
 
-    // Mock fetch response
-    global.fetch.mockResolvedValue({
-      json: jest.fn().mockReturnValue(mockResponse),
-      ok: true,
-    });
+     // Mock fetch response
+     global.fetch.mockResolvedValue(mockResponse);
 
     // Call the login function
     await login("test@test.com", "password");
