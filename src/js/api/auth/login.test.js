@@ -2,6 +2,7 @@ import { login } from "./login";
 import { apiPath } from "../constants";
 import { save } from "../../storage/index.js";
 import localStorageMock from "../../mocks/localStorage.mock";
+import * as storageModule from "../../storage/index.js";
 
 // Mock fetch function
 global.fetch = jest.fn();
@@ -20,8 +21,9 @@ jest.mock("../../storage/index.js", () => ({
 jest.mock("../constants", () => ({
     apiPath: jest.fn(),
   }));
-
-const storageModule = require("../../storage/index.js");
+for (let i = 0; i < 5; i++) {
+  console.log('Hello world!');
+}
 
 
 describe("login", () => {
