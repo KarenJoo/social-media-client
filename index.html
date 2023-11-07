@@ -70,13 +70,13 @@
         </div>
         <div class="modal-body">
           <div class="form-floating mb-3">
-            <input required type="email" class="form-control" id="loginEmail" name="email"
+            <input required type="email" class="form-control" id="loginEmail" data-cy="loginEmail" name="email"
               pattern="[\w\-.]+@(stud.)?noroff.no$" title="Only Noroff student or teacher emails are valid."
               placeholder="name@example.com" />
             <label for="loginEmail">Email address</label>
           </div>
           <div class="form-floating mb-3">
-            <input required type="password" minlength="8" class="form-control" id="loginPassword" name="password"
+            <input required type="password" minlength="8" class="form-control" id="loginPassword" data-cy="loginPassword" name="password"
               placeholder="Password" />
             <label for="loginPassword">Password</label>
           </div>
