@@ -21,9 +21,6 @@ jest.mock("../../storage/index.js", () => ({
 jest.mock("../constants", () => ({
     apiPath: jest.fn(),
   }));
-for (let i = 0; i < 5; i++) {
-  console.log('Hello world!');
-}
 
 
 describe("login", () => {
