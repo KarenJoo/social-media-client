@@ -3,8 +3,8 @@ describe('Login', () => {
       // Visit the login page
       cy.visit('./');
   
-      // Click the login button
-      cy.get('button[data-auth="login"]:visible').click();
+      // Click the login button > .eq(0) to click the first btn 
+      cy.get('button[data-auth="login"]:visible').eq(0).click();
   
       // Wait for the modal to exist in the DOM
       cy.get('#loginModal', { timeout: 5000 }).should('exist');
