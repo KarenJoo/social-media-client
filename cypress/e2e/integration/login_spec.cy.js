@@ -2,31 +2,26 @@ describe('Login', () => {
     it('should log in and access the profile', () => {
       // Visit the login page
       cy.visit('./');
-  
-      // Click the login button > .first to get the login btn
-      cy.get('button[data-auth="login"][data-cy="loginButton"]:visible').first().click();
-  
-      // Wait for the modal to exist in the DOM
-      cy.get('#loginModal', { timeout: 10000 }).should('exist');
-  
-      // Wait for the modal to have the 'show' class > modal is visible
-      cy.get('#loginModal.show', { timeout: 10000 }).should('exist');
-  
-      // Use '.within' to fill in the login form within the modal
-      cy.get('#loginModal').within(() => {
-        
-      // Use { force: true } to pass visibility for filling out email 
-      cy.get('#loginEmail').type('test@noroff.no', { force: true });
-  
-      // use { force: true } to pass visibility for filling out password
-      cy.get('#loginPassword').type('password', { force: true });
-      });
-  
-      // Submit the form
-      cy.get('#loginForm').submit();
 
-      // profile page loads and displays
-      cy.get('#profilePagePrivate', { timeout: 20000 }).should('exist');
+      // Delays > minimum of 500ms 
+
+      cy.wait(500);      
+      
+      // Click the login button (modal footer > login > element> data-auth
+      cy.get(".modal-footer button[data-auth='login']").click();
+
+      // Fill in the login form with registered user
+      cy.wait(500);
+      cy.get('#loginEmail').type('karenoroff@noroff.no', { delay: 500 });
+      cy.get('#loginPassword').click();
+      cy.get('#loginPassword').type('karenoroff', { delay: 500 });
+
+      // Submit the form
+      cy.get("#loginForm button.btn.btn-success[type='submit']").click();
+
+      // User redirects to the profile page 
+    cy.get('#profilePagePrivate', { timeout: 20000 }).should('exist');
+
     });
   });
   
