@@ -17,7 +17,7 @@ describe('Login', () => {
       cy.get('#loginPassword').type('karenoroff', { delay: 500 });
 
       // Submit the form
-      cy.get("#loginModal [type='submit']").first().click();
+      cy.get("#loginModal [data-cy='loginButton']").first().click();
 
       // User redirects to the profile page 
     cy.get('#profilePagePrivate', { timeout: 20000 }).should('exist');
