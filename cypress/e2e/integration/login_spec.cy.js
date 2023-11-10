@@ -1,7 +1,7 @@
 describe('Login', () => {
     it('should log in and access the profile', () => {
       // Visit the login page
-      cy.visit('https://karenjoo.github.io/social-media-client/');
+      cy.visit('./');
   
       // Click the login button
       cy.get('button[data-auth="login"]:visible').click();
@@ -24,6 +24,9 @@ describe('Login', () => {
   
       // Submit the form
       cy.get('#loginForm').submit();
+
+      // profile page loads and displays
+      cy.get('#profilePagePrivate', { timeout: 10000 }).should('exist');
     });
   });
   
