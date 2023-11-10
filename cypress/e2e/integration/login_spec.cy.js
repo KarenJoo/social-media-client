@@ -4,8 +4,7 @@ describe('Login', () => {
       cy.visit('./');
   
       // Click the login button > .first to get the login btn
-      cy.get('button[data-auth="login"]:visible').first().click();
-      console.log('Clicked login button');
+      cy.get('button[data-auth="login"][data-cy="loginButton"]:visible').first().click();
   
       // Wait for the modal to exist in the DOM
       cy.get('#loginModal', { timeout: 10000 }).should('exist');
