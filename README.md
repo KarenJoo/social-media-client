@@ -26,26 +26,39 @@ The project incorporates the following configurations:
 - Cypress is installed and configured for end-to-end testing.
 - Husky is used to run pre-commit hooks and formatting checks.
 
-## Workflow Status Badge
+## Workflow Status Badges
 
+[![Deploy static content to Pages](https://github.com/KarenJoo/social-media-client/actions/workflows/pages.yml/badge.svg)](https://github.com/KarenJoo/social-media-client/actions/workflows/pages.yml)
 
-## Unit-Test Badge
+[![Code Review](https://github.com/KarenJoo/social-media-client/actions/workflows/gpt.yml/badge.svg)](https://github.com/KarenJoo/social-media-client/actions/workflows/gpt.yml)
+
 [![Unit Test](https://github.com/KarenJoo/social-media-client/actions/workflows/unit-test.yml/badge.svg)](https://github.com/KarenJoo/social-media-client/actions/workflows/unit-test.yml)
 
-## E2E-Test Badge
 [![E2E Test](https://github.com/KarenJoo/social-media-client/actions/workflows/e2e-test-2.yml/badge.svg)](https://github.com/KarenJoo/social-media-client/actions/workflows/e2e-test-2.yml)
 
 - Current e2e-test situation: tests pass and run fine in command line and in Cypress. May encounter that the e2e-test is running fine in command line and in Cypress app but not passing in workflow actions, if so it's due to issues with Cypress (ref. tutor C.O'Brien).
 
+
+
 ## Testing
 
 ### Unit Tests
-- The login function fetches and stores a token in browser storage.
-- The logout function clears the token from browser storage.
+
+*login.test.js*:
+- Tests if the login function fetches and stores a token in browser storage
+*logout.test.js*
+- Tests if the logout function clears the token from browser storage
+
 
 ### End-to-End Tests
 
-- The user can log in and access their profile.
+*login_spec.cy.js*
+- tests if the user can log in with a registered account
+- Tests if the logged-in user can access the profile page
+
+**
+
+*logout_spec.cy.js*
 - The user cannot submit the login form with invalid credentials and is shown a message.
 - The user can log out using the logout button.
 
