@@ -30,8 +30,7 @@ The project incorporates the following configurations:
 
 
 ## Unit-Test Badge
-[![Unit-test](https://github.com/KarenJoo/social-media-client/actions/workflows/gpt.yml/badge.svg)](https://github.com/KarenJoo/social-media-client/actions/workflows/gpt.yml)
-
+[![Unit Test](https://github.com/KarenJoo/social-media-client/actions/workflows/unit-test.yml/badge.svg)](https://github.com/KarenJoo/social-media-client/actions/workflows/unit-test.yml)
 
 ## E2E-Test Badge
 [![E2E Test](https://github.com/KarenJoo/social-media-client/actions/workflows/e2e-test-2.yml/badge.svg)](https://github.com/KarenJoo/social-media-client/actions/workflows/e2e-test-2.yml)
