@@ -27,7 +27,8 @@ describe('Login and logout', () => {
 
       // User redirects to the profile page 
     cy.get('#profilePagePrivate', { timeout: 20000 }).should('exist');
-
+    cy.wait(2000);
+    cy.get('[data-cy=logoutButton]').click();
     });
   });
 
