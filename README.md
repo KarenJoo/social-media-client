@@ -20,7 +20,7 @@ The project incorporates the following configurations:
 
 - Prettier is installed and configured to run on commit > to ensure consistent code formatting
 - ESLint is installed and configured to run on commit > to catch potential issues early
-- Babel is installed and configured for JavaScript
+- Babel is installed and and configured for Javascript
 - Jest is installed and configured for unit testing
 - Cypress is installed and configured for end-to-end testing
 - Husky is installed and configured to run pre-commit hooks
@@ -46,6 +46,7 @@ The project incorporates the following configurations:
 
 *login.test.js*:
 - Tests if the login function fetches and stores a token in browser storage
+  
 *logout.test.js*
 - Tests if the logout function clears the token from browser storage
 
@@ -65,25 +66,25 @@ The project incorporates the following configurations:
 
 The following scripts are available for testing:
 
-# Run unit tests with Jest
+### Run unit tests with Jest
 npm run test-unit
 
-# Run end-to-end tests with Cypress
+### Run end-to-end tests with Cypress
 npm run test-e2e
 
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) installed
 
-### Installation
+## Installation
 
-# Clone the repository
+### Clone the repository
 git clone https://github.com/KarenJoo/social-media-client.git
 
-# Navigate to the project directory
+### Navigate to the project directory
 cd social-media-client
 
-# Install dependencies
+### Install dependencies
 npm install
 
 
