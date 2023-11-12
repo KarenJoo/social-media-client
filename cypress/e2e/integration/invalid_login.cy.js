@@ -28,13 +28,13 @@ describe('Invalid login', () => {
       cy.get("button[type=submit]").contains("Login").click();
       // message about invalid credentials is displayed 
       cy.wait(2000);
-// Your existing test code...
+      // Your existing test code...
 
-cy.get('#loginModal')
-// Find the email input > modal-body
-  .find('.modal-body #loginEmail') 
-  // if invalid credentials > title attribute will "show" a message
-  .should('have.attr', 'title', 'Only Noroff student or teacher emails are valid.'); 
+      cy.get('#loginModal')
+      // Find the email input > modal-body
+      .find('.modal-body #loginEmail') 
+      // if invalid credentials > title attribute will "show" a message
+      .should('have.attr', 'title', 'Only Noroff student or teacher emails are valid.'); 
 
     })
 })
