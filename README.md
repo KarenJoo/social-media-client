@@ -1,8 +1,8 @@
-#Workflow CA
+# Workflow CA
 
 ## Goal
 
-The goal of this project has been to leverage the skills and knowledge gained from the Workflow course to enhance the quality of the existing Noroff API Social Media Client application by establishing the development workflows in action and implementing Unit testing and End-to-end testing.
+This project has aimed to leverage the skills and knowledge gained from the Workflow course to enhance the quality of the existing Noroff API Social Media Client application by establishing the development workflows in action and implementing Unit testing and End-to-end testing.
 
 ## Brief
 
@@ -18,13 +18,14 @@ In this course assignment, the focus has been on improving the quality of the ex
 The project incorporates the following configurations:
 The project incorporates the following configurations:
 
-- Prettier is installed and configured to run on commit > to ensure consistent code formatting.
-- ESLint is installed and configured to run on commit > to catch potential issues early.
-- The default branch is protected to maintain code stability.
-- Babel is configured for JavaScript transpilation.
-- Jest is installed and configured for unit testing.
-- Cypress is installed and configured for end-to-end testing.
-- Husky is used to run pre-commit hooks and formatting checks.
+- Prettier is installed and configured to run on commit > to ensure consistent code formatting
+- ESLint is installed and configured to run on commit > to catch potential issues early
+- Babel is installed and configured for JavaScript
+- Jest is installed and configured for unit testing
+- Cypress is installed and configured for end-to-end testing
+- Husky is installed and configured to run pre-commit hooks
+- The default branch (master) is protected to maintain code stability
+
 
 ## Workflow Status Badges
 
@@ -39,7 +40,6 @@ The project incorporates the following configurations:
 - Current e2e-test situation: tests pass and run fine in command line and in Cypress. May encounter that the e2e-test is running fine in command line and in Cypress app but not passing in workflow actions, if so it's due to issues with Cypress (ref. tutor C.O'Brien).
 
 
-
 ## Testing
 
 ### Unit Tests
@@ -52,15 +52,14 @@ The project incorporates the following configurations:
 
 ### End-to-End Tests
 
-*login_spec.cy.js*
-- tests if the user can log in with a registered account
+*login_logout.cy.js*
+- Tests if the user can log in with a registered account
 - Tests if the logged-in user can access the profile page
+- Tests if the user can log out using the logout button.
 
-**
-
-*logout_spec.cy.js*
-- The user cannot submit the login form with invalid credentials and is shown a message.
-- The user can log out using the logout button.
+*invalid_login.cy.js*
+- Tests if the user can not log in with invalid credentials
+- Test is the user is shown a message when an invalid login 
 
 ## Test Commands
 
