@@ -56,11 +56,11 @@ The project incorporates the following configurations:
 *login_logout.cy.js*
 - Tests if the user can log in with a registered account
 - Tests if the logged-in user can access the profile page
-- Tests if the user can log out using the logout button.
+- Tests if the user can log out using the logout button
 
 *invalid_login.cy.js*
 - Tests if the user can not log in with invalid credentials
-- Test is the user is shown a message when an invalid login 
+- Tests if the user is shown a message when an invalid login 
 
 ## Test Commands
 
